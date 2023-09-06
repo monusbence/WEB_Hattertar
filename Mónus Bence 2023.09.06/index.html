@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adatok átváltása</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js"></script>
+</head>
+
+<body>
+    <form>
+        <label for="Adatmennyiseg">Adatmennyiség</label>
+        <input type="number" id="adatmeny" name="Adatmennyiseg">
+        <select name="adat-tipus" id="adat-tipus">
+            <option value="KB">KB</option>
+            <option value="MB">MB</option>
+            <option value="GB">GB</option>
+            <option value="TB">TB</option>
+        </select><br><br>
+        <label for="Atviteliseb">Átviteli sebesség</label>
+        <input type="range" id="Atviteliseb" name="Atviteliseb" min="10" max="5000" onchange="csuszka()">
+        <label for="ertek" id="ertek">0</label>
+        <select name="atviteli-seb" id="atviteli-seb">
+            <option value="KB/s">KB/s</option>
+            <option value="MB/s">MB/s</option>
+            <option value="GB/s">GB/s</option>
+        </select><br><br>
+        <label for="Atviteliido">Átviteli idő: </label>
+        <label id="eredmeny"></label>
+        <br><br>
+        <input type="button" value="Eredmény" onclick="Eredmeny()">
+
+    </form>
+</body>
+
+</html>
